@@ -1,18 +1,113 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    tools:context=".view.MainActivity">
 
-    <TextView
+    <EditText
+        android:id="@+id/ed_name_fruit"
+        android:layout_marginBottom="20dp"
+        android:inputType="text"
+        android:hint="input name fruit"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:id="@+id/ed_color_fruit"
+        android:inputType="text"
+        android:hint="input color fruit"
+        android:layout_marginBottom="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+    <Button
+        android:id="@+id/btn_create_data"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="Create"
+        android:layout_marginBottom="20dp"
+        android:textAllCaps="false"
+        android:textSize="20sp" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <EditText
+        android:id="@+id/ed_get_data_for_id"
+        android:layout_width="match_parent"
+        android:inputType="number"
+        android:hint="input id for get fruit"
+        android:layout_marginBottom="20dp"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/text_view_name_fruit"
+            android:text="Name fruit"
+            android:gravity="center_horizontal"
+            android:layout_marginBottom="10dp"
+            android:textAllCaps="false"
+            android:textSize="30sp"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/text_view_color_fruit"
+            android:text="Color fruit"
+            android:gravity="center_horizontal"
+            android:layout_weight="1"
+            android:textAllCaps="false"
+            android:textSize="30sp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_get_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Get"
+        android:layout_marginBottom="20dp"
+        android:textAllCaps="false"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/ed_delete_fruit_for_id"
+        android:layout_width="match_parent"
+        android:inputType="number"
+        android:hint="input id for delete fruit"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/btn_delete_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Delete for id"
+        android:textAllCaps="false"
+        android:textSize="20sp" />
+
+
+    <EditText
+        android:id="@+id/ed_delete_fruit_for_name"
+        android:layout_width="match_parent"
+        android:inputType="text"
+        android:hint="input name for delete fruit"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/btn_delete_data_for_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Delete for name"
+        android:textAllCaps="false"
+        android:textSize="20sp" />
+
+
+</LinearLayout>
